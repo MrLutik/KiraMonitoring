@@ -49,6 +49,7 @@ make build
 cd $GOPATH/src/github.com/prometheus/prometheus
 mv $GOPATH/src/github.com/prometheus/Dockerfile /$GOPATH/src/github.com/prometheus/prometheus/
 #building container
+make npm_licenses
 make build common-docker-amd64
 
 #::TEST::  deluser prometheus && deluser node_exporter && rm -rf /etc/prometheus/ && rm -rf /lib/prometheus/ && rm -rf $GOPATH/src/github.com/prometheus/
